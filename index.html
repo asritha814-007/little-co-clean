@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Little & Co.</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo.png" alt="Little & Co Logo" class="logo">
+
+<h1>Little & Co.</h1>
+
+<p class="tagline">Crafted with Love ✨</p>
+
+</header>
+
+<div class="filter">
+    <button onclick="show('all')">ALL</button>
+    <button onclick="show('plush')">PLUSH</button>
+    <button onclick="show('accessories')">ACCESSORIES</button>
+</div>
+
+<h2 class="section-title">🧸 Plush Collection</h2>
+
+<section class="products">
+
+<div class="card plush">
+<a href="product.html?item=bunny">
+<img src="images/bunny.jpeg" alt="Bunny Plush">
+</a>
+<h3>Bunny Plush</h3>
+<div class="price">₹500</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=babybunny">
+<img src="images/babybunny.jpeg" alt="Baby Bunny">
+</a>
+<h3>Baby Bunny</h3>
+<div class="price">₹400</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=plush-heart">
+<img src="images/plush-heart.jpeg" alt="Plush Heart">
+</a>
+<h3>Plush Heart</h3>
+<div class="price">₹180</div>
+</div>
+
+</section>
+
+<h2 class="section-title">🌸 Accessories</h2>
+
+<section class="products">
+
+<div class="card accessories">
+<a href="product.html?item=tulip-tie">
+<img src="images/tulip-tie.jpeg" alt="Tulip Tie">
+</a>
+<h3>Tulip Ties</h3>
+<div class="price">₹70</div>
+</div>
+
+</section>
+
+<h2 class="section-title">🐡 Pouches</h2>
+
+<section class="products">
+
+<div class="card accessories">
+<a href="product.html?item=pufferfish-pouch">
+<img src="images/pufferfish-pouch.jpeg" alt="Pufferfish Pouch">
+</a>
+<h3>Pufferfish Pouch</h3>
+<div class="price">₹200</div>
+</div>
+
+</section>
+
+<script>
+function show(category) {
+
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+        if(category === 'all'){
+            card.style.display = "block";
+        }
+
+        else if(card.classList.contains(category)){
+            card.style.display = "block";
+        }
+
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+</script>
+
+</body>
+</html>

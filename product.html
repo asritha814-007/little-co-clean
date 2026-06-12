@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Details</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<img id="img">
+<h2 id="name"></h2>
+
+<div class="price" id="price"></div>
+
+<p id="desc"></p>
+
+<div class="badge">⏳ Takes 1–2 Weeks to Prepare</div>
+
+<br>
+
+<a class="btn" id="buy">Buy on WhatsApp</a>
+
+</div>
+
+<script>
+
+const products = {
+    bunny: {
+        img: "images/bunny.jpeg",
+        name: "Bunny Plush",
+        price: "₹500",
+        desc: "Soft handmade crochet bunny perfect for gifting."
+    },
+    babybunny: {
+        img: "images/babybunny.jpeg",
+        name: "Baby Bunny",
+        price: "₹400",
+        desc: "Mini soft handmade bunny."
+    },
+    "plush-heart": {
+        img: "images/plush-heart.jpeg",
+        name: "Plush Heart",
+        price: "₹180",
+        desc: "Cute soft heart plush."
+    },
+    "tulip-tie": {
+        img: "images/tulip-tie.jpeg",
+        name: "Tulip Ties",
+        price: "₹70",
+        desc: "Cute crochet hair ties."
+    },
+    "pufferfish-pouch": {
+        img: "images/pufferfish-pouch.jpeg",
+        name: "Pufferfish Pouch",
+        price: "₹200",
+        desc: "Stylish crochet pouch."
+    }
+};
+
+const item = new URLSearchParams(window.location.search).get("item");
+const p = products[item];
+
+document.getElementById("img").src = p.img;
+document.getElementById("name").innerText = p.name;
+document.getElementById("price").innerText = p.price;
+document.getElementById("desc").innerText = p.desc;
+
+document.getElementById("buy").href =
+"https://wa.me/917337228769?text=I%20want%20to%20order%20" + p.name;
+
+</script>
+
+</body>
+</html>
