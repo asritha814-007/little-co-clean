@@ -51,12 +51,13 @@ header h1{
     font-size:14px;
     font-weight:600;
     cursor:pointer;
-    transition:0.3s;
 }
 
-.filter button:hover{
-    opacity:0.9;
-    transform:scale(1.03);
+.section-title{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#4A3F3A;
 }
 
 .products{
@@ -69,13 +70,12 @@ header h1{
 }
 
 .card{
-    background:rgb(254, 252, 252);
-    border-radius:18px;
+    background:white;
+    border-radius:15px;
     overflow:hidden;
     text-align:center;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:0.3s ease;
-    padding-bottom:12px;
+    transition:0.3s;
 }
 
 .card:hover{
@@ -87,11 +87,6 @@ header h1{
     aspect-ratio:1/1;
     object-fit:cover;
     display:block;
-    transition:0.3s ease;
-}
-
-.card:hover img{
-    transform:scale(1.03);
 }
 
 .card h3{
@@ -107,6 +102,12 @@ header h1{
     margin:8px 0;
 }
 
+.card p{
+    padding:0 10px;
+    font-size:14px;
+    color:#666;
+}
+
 .badge{
     display:inline-block;
     background:#FFE4EB;
@@ -120,13 +121,12 @@ header h1{
 .btn{
     display:inline-block;
     margin:12px 0 15px;
-    padding:12px 22px;
+    padding:10px 18px;
     background:#C88C9B;
     color:white;
     text-decoration:none;
     border-radius:25px;
     font-weight:600;
-    transition:0.3s;
 }
 
 .btn:hover{
@@ -138,10 +138,10 @@ header h1{
 .container{
     width:90%;
     max-width:500px;
-    margin:25px auto;
+    margin:20px auto;
     background:white;
     padding:20px;
-    border-radius:20px;
+    border-radius:18px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     text-align:center;
     box-sizing:border-box;
@@ -150,24 +150,13 @@ header h1{
 .container img{
     width:100%;
     height:auto;
-    border-radius:15px;
+    border-radius:12px;
     display:block;
-}
-
-.container h2{
-    margin-top:18px;
-    font-size:30px;
-}
-
-#desc{
-    color:#666;
-    line-height:1.6;
-    font-size:15px;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .products{
         grid-template-columns:repeat(2,1fr);
@@ -185,11 +174,11 @@ header h1{
     }
 
     .card h3{
-        font-size:14px;
+        font-size:15px;
     }
 
     .price{
-        font-size:17px;
+        font-size:18px;
     }
 
     .container{
@@ -197,14 +186,17 @@ header h1{
         padding:15px;
     }
 
+    .container img{
+        width:100%;
+        height:auto;
+    }
+
     .container h2{
-        font-size:26px;
+        font-size:28px;
     }
 
     .btn{
-        width:85%;
+        width:80%;
         box-sizing:border-box;
     }
-
 }
-
