@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img id="img" alt="Product Image">
+
+    <h2 id="name"></h2>
+
+    <div class="price" id="price"></div>
+
+    <p id="desc"></p>
+
+    <div class="badge">
+        ⏳ Takes 1–2 Weeks to Prepare
+    </div>
+
+    <br>
+
+    <a class="btn" id="buy" target="_blank">
+        Buy on WhatsApp
+    </a>
+
+</div>
+
+<script>
+
+const products = {
+
+    "babybunny": {
+        img: "images/babybunny.png",
+        name: "Baby Bunny",
+        price: "₹400",
+        desc: "Cute handmade crochet baby bunny."
+    },
+
+    "blush-heart": {
+        img: "images/blush-heart.png",
+        name: "Blush Heart",
+        price: "₹50",
+        desc: "Soft crochet heart keychain."
+    },
+
+    "bunny-plush": {
+        img: "images/bunny-plush.png",
+        name: "Bunny Plush",
+        price: "₹500",
+        desc: "Soft crochet bunny plush perfect for gifting."
+    },
+
+    "bunnypink-scrunch": {
+        img: "images/bunnypink-scrunch.png",
+        name: "Bunny Pink Scrunch",
+        price: "₹150",
+        desc: "Cute crochet scrunchie with bunny theme."
+    },
+
+    "cherrycake": {
+        img: "images/cherrycake.png",
+        name: "Cherry Cake",
+        price: "₹70",
+        desc: "Mini crochet cake keychain."
+    },
+
+    "creamblossom-pouch": {
+        img: "images/creamblossom-pouch.png",
+        name: "Cream Blossom Pouch",
+        price: "₹200",
+        desc: "Elegant handmade crochet pouch."
+    },
+
+    "duckle": {
+        img: "images/duckle.png",
+        name: "Duckle",
+        price: "₹200",
+        desc: "Cute crochet duck plushie."
+    },
+
+    "heart-plush": {
+        img: "images/heart-plush.png",
+        name: "Heart Plush",
+        price: "₹150",
+        desc: "Soft crochet heart plush."
+    },
+
+    "honeybee": {
+        img: "images/honeybee.png",
+        name: "Honey Bee",
+        price: "₹150",
+        desc: "Adorable crochet honeybee."
+    },
+
+    "krishna-feather": {
+        img: "images/krishna-feather.png",
+        name: "Krishna Feather",
+        price: "₹80",
+        desc: "Beautiful crochet Krishna feather."
+    },
+
+    "lil-krishna": {
+        img: "images/lil-krishna.png",
+        name: "Lil Krishna",
+        price: "₹350",
+        desc: "Handmade crochet Krishna doll."
+    },
+
+    "lil-octopus": {
+        img: "images/lil-octopus.png",
+        name: "Lil Octopus",
+        price: "₹250",
+        desc: "Cute crochet octopus plushie."
+    },
+
+    "pufferfish-pouch": {
+        img: "images/pufferfish-pouch.png",
+        name: "Pufferfish Pouch",
+        price: "₹200",
+        desc: "Fun handmade crochet pouch."
+    },
+
+    "scrunch": {
+        img: "images/scrunch.png",
+        name: "Scrunchie",
+        price: "₹80",
+        desc: "Soft crochet scrunchie."
+    },
+
+    "sunflower": {
+        img: "images/sunflower.png",
+        name: "Sunflower",
+        price: "₹80",
+        desc: "Crochet sunflower accessory."
+    },
+
+    "sunflower-tie": {
+        img: "images/sunflower-tie.png",
+        name: "Sunflower Tie",
+        price: "₹50",
+        desc: "Cute sunflower crochet tie."
+    },
+
+    "tulip-tie": {
+        img: "images/tulip-tie.png",
+        name: "Tulip Tie",
+        price: "₹50",
+        desc: "Cute crochet tulip tie."
+    }
+
+};
+
+const item = new URLSearchParams(window.location.search).get("item");
+
+const p = products[item];
+
+if(p){
+
+    document.getElementById("img").src = p.img;
+    document.getElementById("name").textContent = p.name;
+    document.getElementById("price").textContent = p.price;
+    document.getElementById("desc").textContent = p.desc;
+
+    document.getElementById("buy").href =
+    "https://wa.me/917337228769?text=Hi!%20I%20want%20to%20order%20" +
+    encodeURIComponent(p.name);
+
+}
+
+</script>
+
+</body>
+</html>
+

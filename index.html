@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Little & Co.</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo.png" alt="Little & Co Logo" class="logo">
+
+<h1>Little & Co.</h1>
+
+<p class="tagline">Crafted with Love ✨</p>
+
+</header>
+
+<div class="filter">
+    <button onclick="show('all')">ALL</button>
+    <button onclick="show('plush')">PLUSH</button>
+    <button onclick="show('accessories')">ACCESSORIES</button>
+</div>
+
+<section class="products">
+
+<!-- PLUSH -->
+
+<div class="card plush">
+<a href="product.html?item=babybunny">
+<img src="images/babybunny.png" alt="Baby Bunny">
+</a>
+<h3>Baby Bunny</h3>
+<div class="price">₹400</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=bunny-plush">
+<img src="images/bunny-plush.png" alt="Bunny Plush">
+</a>
+<h3>Bunny Plush</h3>
+<div class="price">₹500</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=heart-plush">
+<img src="images/heart-plush.png" alt="Heart Plush">
+</a>
+<h3>Heart Plush</h3>
+<div class="price">₹150</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=lil-octopus">
+<img src="images/lil-octopus.png" alt="Lil Octopus">
+</a>
+<h3>Lil Octopus</h3>
+<div class="price">₹250</div>
+</div>
+
+<div class="card plush">
+<a href="product.html?item=bunnypink-scrunch">
+<img src="images/bunnypink-scrunch.jpeg" alt="Bunny Pink Scrunch">
+</a>
+<h3>Bunny Pink Scrunch</h3>
+<div class="price">₹150</div>
+</div>
+
+<!-- ACCESSORIES -->
+
+<div class="card accessories">
+<a href="product.html?item=blush-heart">
+<img src="images/blush-heart.png" alt="Blush Heart">
+</a>
+<h3>Blush Heart</h3>
+<div class="price">₹50</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=cherrycake">
+<img src="images/cherrycake.png" alt="Cherry Cake">
+</a>
+<h3>Cherry Cake</h3>
+<div class="price">₹70</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=creamblossom-pouch">
+<img src="images/creamblossom-pouch.png" alt="Cream Blossom Pouch">
+</a>
+<h3>Cream Blossom Pouch</h3>
+<div class="price">₹200</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=duckle">
+<img src="images/duckle.png" alt="Duckle">
+</a>
+<h3>Duckle</h3>
+<div class="price">₹200</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=honeybee">
+<img src="images/honeybee.png" alt="Honey Bee">
+</a>
+<h3>Honey Bee</h3>
+<div class="price">₹150</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=krishna-feather">
+<img src="images/krishna-feather.png" alt="Krishna Feather">
+</a>
+<h3>Krishna Feather</h3>
+<div class="price">₹80</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=lil-krishna">
+<img src="images/lil-krishna.png" alt="Lil Krishna">
+</a>
+<h3>Lil Krishna</h3>
+<div class="price">₹350</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=pufferfish-pouch">
+<img src="images/pufferfish-pouch.png" alt="Pufferfish Pouch">
+</a>
+<h3>Pufferfish Pouch</h3>
+<div class="price">₹200</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=scrunch">
+<img src="images/scrunch.png" alt="Scrunch">
+</a>
+<h3>Scrunch</h3>
+<div class="price">₹80</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=sunflower">
+<img src="images/sunflower.png" alt="Sunflower">
+</a>
+<h3>Sunflower</h3>
+<div class="price">₹80</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=sunflower-tie">
+<img src="images/sunflower-tie.png" alt="Sunflower Tie">
+</a>
+<h3>Sunflower Tie</h3>
+<div class="price">₹50</div>
+</div>
+
+<div class="card accessories">
+<a href="product.html?item=tulip-tie">
+<img src="images/tulip-tie.png" alt="Tulip Tie">
+</a>
+<h3>Tulip Tie</h3>
+<div class="price">₹50</div>
+</div>
+
+</section>
+
+<script>
+
+function show(category){
+
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+        if(category === 'all'){
+            card.style.display = "block";
+        }
+
+        else if(card.classList.contains(category)){
+            card.style.display = "block";
+        }
+
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+
